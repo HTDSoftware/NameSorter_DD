@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    },
+    "name-sorter": {
+      "commandName": "Project",
+      "commandLineArgs": "unsorted-names-list.txt",
+      "workingDirectory": "C:\\Users\\JeffMenashe\\Desktop"
+    }
+  }
+}
