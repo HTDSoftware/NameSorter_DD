@@ -1,6 +1,6 @@
-# NameSorter
+# NameSorter Dye & Durham
 
-A simple yet SOLID, testable, and maintainable console application for sorting names. 
+A simple yet SOLID, testable, and maintainable console application for sorting names.  
 
 Developed for the Dye & Durham coding challenge to demonstrate thoughtful design, code clarity, and team empathy.
 
@@ -8,7 +8,7 @@ Developed for the Dye & Durham coding challenge to demonstrate thoughtful design
 
 ## 💡 Problem
 
-Given a list of names (each consisting  of up to three given names followed by a surname), the application sorts the names:
+Given a list of names (each consisting of up to three given names followed by a surname), the application sorts the names:
 
 - Primarily by **surname**
 - Secondarily by the concatenated **given names**
@@ -29,35 +29,37 @@ The goal is not to write a trivial sorting algorithm, but to:
 ## 🏗️ Project Structure
 
 ```
-    NameSorter.sln │
-        ├── NameSorter.Console # Entry point (AppRunner + Program)
-        ├── NameSorter.Core # Domain models and services │
-            ├── Models/ # Person model │
-            ├── Services/ # Parser, Sorter, Processor │
-            └── IO/ # Output writers (file, console, composite) │
-        └── NameSorter.Tests # xUnit + NSubstitute test project
+NameSorter.sln
+    ├── NameSorter.Console         # Entry point (AppRunner + Program)
+    ├── NameSorter.Core            # Domain models and services
+        ├── Models/                # Person model
+        ├── Services/              # Parser, Sorter, Processor
+        └── IO/                    # Output writers (file, console, composite)
+    └── NameSorter.Tests           # xUnit + NSubstitute test project
 ```
+
+---
 
 ## 📥 Getting Started
 
 1. **Clone the repository**:
 
-    ```bash
-    git clone https://github.com/HTDSoftware/NameSorter_DD.git
-    cd NameSorter_DD
-    ```
+   ```bash
+   git clone https://github.com/HTDSoftware/NameSorter_DD.git
+   cd NameSorter_DD
+   ```
 
 2. **Restore dependencies**:
 
-    ```bash
-    dotnet restore
-    ```
+   ```bash
+   dotnet restore
+   ```
 
 3. **Build the solution**:
 
-    ```bash
-    dotnet build
-    ```
+   ```bash
+   dotnet build
+   ```
 
 4. **Run the application** (see below for usage):
 
@@ -71,67 +73,67 @@ The goal is not to write a trivial sorting algorithm, but to:
 
 ### ▶️ Running the App
 
-1. Create a text file, e.g. `unsorted-names-list.txt`:
+1. Create a text file, e.g., `unsorted-names-list.txt`:
 
-    ```
-     Janet Parsons
-     Vaughn Lewis
-     Adonis Julius Archer
-     Shelby Nathan Yoder
-     Marin Alvarez
-     London Lindsey
-     Beau Tristan Bentley
-     Leo Gardner
-     Hunter Uriah Mathew Clarke
-     Mikayla Lopez
-     Frankie Conner Ritter
-    ```
+   ```
+   Janet Parsons
+   Vaughn Lewis
+   Adonis Julius Archer
+   Shelby Nathan Yoder
+   Marin Alvarez
+   London Lindsey
+   Beau Tristan Bentley
+   Leo Gardner
+   Hunter Uriah Mathew Clarke
+   Mikayla Lopez
+   Frankie Conner Ritter
+   ```
 
-2. From the solution root 
-(I acknowledge here that the remit says executing the program in the following way; name-sorter ./unsorted-names-list.txt):
+2. From the solution root:
 
-    ```bash
-    ./NameSorter_DD.Console.exe ./unsorted-names-list.txt
-    ```
+   ```bash
+   ./NameSorter_DD.Console.exe ./unsorted-names-list.txt
+   ```
 
 3. Output will be written to:
 
-    - The **console**
-    - A file called `sorted-names-list.txt`
+   - The **console**
+   - A file called `sorted-names-list.txt`
 
 ---
 
 ## ✅ Example Input
 
-    ```
-     Janet Parsons
-     Vaughn Lewis
-     Adonis Julius Archer
-     Shelby Nathan Yoder
-     Marin Alvarez
-     London Lindsey
-     Beau Tristan Bentley
-     Leo Gardner
-     Hunter Uriah Mathew Clarke
-     Mikayla Lopez
-     Frankie Conner Ritter
-    ```
+```
+Janet Parsons
+Vaughn Lewis
+Adonis Julius Archer
+Shelby Nathan Yoder
+Marin Alvarez
+London Lindsey
+Beau Tristan Bentley
+Leo Gardner
+Hunter Uriah Mathew Clarke
+Mikayla Lopez
+Frankie Conner Ritter
+```
 
 ### 📤 Output (console + sorted-names-list.txt)
 
-    ```
-     Marin Alvarez
-     Adonis Julius Archer
-     Beau Tristan Bentley
-     Hunter Uriah Mathew Clarke
-     Leo Gardner
-     Vaughn Lewis
-     London Lindsey
-     Mikayla Lopez
-     Janet Parsons
-     Frankie Conner Ritter
-     Shelby Nathan Yoder
-     ```
+```
+Marin Alvarez
+Adonis Julius Archer
+Beau Tristan Bentley
+Hunter Uriah Mathew Clarke
+Leo Gardner
+Vaughn Lewis
+London Lindsey
+Mikayla Lopez
+Janet Parsons
+Frankie Conner Ritter
+Shelby Nathan Yoder
+```
+
 ---
 
 ## 🔍 Design Principles
@@ -151,48 +153,47 @@ Tests are written using [xUnit](https://xunit.net/) and [NSubstitute](https://ns
 
 ### 🔬 Test Coverage Includes:
 
-| Test Type | What it Validates |
-|-----------|-------------------|
-| Unit tests | `NameParser`, `NameSorter`, `NameProcessor` |
+| Test Type       | What it Validates                         |
+|------------------|-------------------------------------------|
+| Unit tests       | `NameParser`, `NameSorter`, `NameProcessor` |
 | End-to-End tests | Full app run via `AppRunner` with real file I/O |
 
 ### ▶️ Run tests:
 
 ```bash
 dotnet test
-
-🧼 Example: End-to-End Test Validates Full Pipeline
-Writes to sorted-names-list.txt
-
-Runs the app with AppRunner
-
-Asserts that sorted-names-list.txt is created with expected content
-
-Cleans up all files after execution
-
-Here is the reformatted "Final Thoughts" section with proper headings:
-
 ```
+
+Example: End-to-End Test Validates Full Pipeline  
+- Writes to `sorted-names-list.txt`  
+- Runs the app with `AppRunner`  
+- Asserts that `sorted-names-list.txt` is created with expected content  
+- Cleans up all files after execution  
+
+---
+
 ## 🙌 Final Thoughts
 
 ### Below is the section of the remit which determined the majority of my coding decisions:
+
 "Most importantly it is to understand how your code communicates its purpose clearly and with empathy to your potential team members.  
 What do we mean by empathy?  
 Empathy here is caring about how easy your code is to understand and navigate for the next engineer who touches it.  
 Secondly, it is to understand your ability to compose quality code that adheres to SOLID."
 
 ### Design considerations:
-When I began to design my solution, there was a possibility to abstract some elements to a further degree and to loosely couple further elements, and to use syntax introduced in the latest versions of:
-- More Interfaces and Classes
-- More Dependency Injection
-- The use of Primary Constructors
-- The use of Coalescing Expressions
-- The use of more Advanced array access
-- etc.
+
+When I began to design my solution, there was a possibility to abstract some elements to a further degree and to loosely couple further elements, and to use syntax introduced in the latest versions. For example:  
+- More Interfaces and Classes  
+- More Dependency Injection  
+- The use of Primary Constructors  
+- The use of Coalescing Expressions  
+- The use of more Advanced array access  
 
 ---
 
 ## ✅ Below is the checklist provided in the remit:
+
 - The solution should be available for review on GitHub — **DONE**
 - The names should be sorted correctly — **DONE**
 - It should print the sorted list of names to screen — **DONE**
@@ -203,4 +204,3 @@ When I began to design my solution, there was a possibility to abstract some ele
 ---
 
 Thanks for the opportunity!
-```
