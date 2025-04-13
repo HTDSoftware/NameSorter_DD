@@ -134,6 +134,14 @@ Frankie Conner Ritter
 Shelby Nathan Yoder
 ```
 
+🛠️ GitHub Actions Workflow
+This repository uses GitHub Actions for Continuous Integration (CI). The workflow ensures that the codebase maintains high quality by running automated checks such as building the solution and executing tests.
+
+Key Features:
+Build and Test: Automatically builds the solution and runs all tests on each push or pull request.
+Platform Coverage: Ensures compatibility across supported platforms.
+You can view the workflow file in the repository for more details: .github/workflows/NameSorter_DD_BuildTest.yml.
+
 ---
 
 ## 🔍 Design Principles
