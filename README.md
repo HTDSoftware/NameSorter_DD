@@ -1,13 +1,14 @@
 # NameSorter
 
-A simple yet SOLID, testable, and maintainable console application for sorting names.  
+A simple yet SOLID, testable, and maintainable console application for sorting names. 
+
 Developed for the Dye & Durham coding challenge to demonstrate thoughtful design, code clarity, and team empathy.
 
 ---
 
 ## 💡 Problem
 
-Given a list of names (each consisting of a surname followed by up to three given names), the application sorts the names:
+Given a list of names (each consisting  of up to three given names followed by a surname), the application sorts the names:
 
 - Primarily by **surname**
 - Secondarily by the concatenated **given names**
@@ -27,15 +28,23 @@ The goal is not to write a trivial sorting algorithm, but to:
 
 ## 🏗️ Project Structure
 
-```NameSorter.sln │ ├── NameSorter.Core # Domain models and services │ ├── Models/ # Person model │ ├── Services/ # Parser, Sorter, Processor │ └── IO/ # Output writers (file, console, composite) │ ├── NameSorter.Console # Entry point (AppRunner + Program) │ └── NameSorter.Tests # xUnit + NSubstitute test project```
+```
+    NameSorter.sln │
+        ├── NameSorter.Console # Entry point (AppRunner + Program)
+        ├── NameSorter.Core # Domain models and services │
+            ├── Models/ # Person model │
+            ├── Services/ # Parser, Sorter, Processor │
+            └── IO/ # Output writers (file, console, composite) │
+        └── NameSorter.Tests # xUnit + NSubstitute test project
+```
 
 ## 📥 Getting Started
 
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/your-username/NameSorter.git
-    cd NameSorter
+    git clone https://github.com/HTDSoftware/NameSorter_DD.git
+    cd NameSorter_DD
     ```
 
 2. **Restore dependencies**:
@@ -51,13 +60,14 @@ The goal is not to write a trivial sorting algorithm, but to:
     ```
 
 4. **Run the application** (see below for usage):
+
 ---
 
 ## 🚀 How to Run
 
 ### 🛠 Prerequisites
 
-- [.NET 6 SDK or later](https://dotnet.microsoft.com/en-us/download)
+- [.NET 8 SDK or later](https://dotnet.microsoft.com/en-us/download)
 
 ### ▶️ Running the App
 
@@ -106,7 +116,6 @@ The goal is not to write a trivial sorting algorithm, but to:
      Mikayla Lopez
      Frankie Conner Ritter
     ```
-
 
 ### 📤 Output (console + sorted-names-list.txt)
 
@@ -162,6 +171,28 @@ Asserts that sorted-names-list.txt is created with expected content
 Cleans up all files after execution
 
 🙌 Final Thoughts
-This solution reflects how I'd write production-ready code with clarity, empathy, and testability in mind — all while staying lean and focused.
+Below is the section of the remit which determined the majority of my coding decisions:
 
+"Most importantly it is to understand how your code communicates it's purpose clearly and with empathy to your potential team members.
+What do we mean by empathy?
+Empathy here is caring about how easy your code is to understand and navigate for the next engineer who touches it.
+Secondly it is to understand your ability to compose quality code that adheres to SOLID"
+
+When I began to design my solution, there was a possibility to abstract some elements to a further degree and to loosely couple further elements, and to use syntax introduced in the latest versions of C#, but for "Ease of Understanding" for the next Engineer I stopped where I did. Among my considerations, I could have introduced:
+
+More Interfaces and Classes
+More Dependency Injection
+The use of Primary Constructors
+The use of Coalescing Expressions
+The use of more Advanced array access
+etc.
+
+✅ Below is the checklist provided in the remit:
+The solution should be available for review on GitHub — DONE
+The names should be sorted correctly — DONE
+It should print the sorted list of names to screen — DONE
+Write/overwrite the sorted list of names to a file called sorted-names-list.txt — DONE
+Unit tests should exist — DONE
+Minimal, practical documentation should exist — DONE (README.md)
+ 
 Thanks for the opportunity!
