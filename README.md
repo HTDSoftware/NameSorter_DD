@@ -144,7 +144,7 @@ Platform Coverage: Ensures compatibility across supported platforms.
 
 You can view the workflow file in the repository for more details:  
   
-    **.github/workflows/NameSorter_DD_BuildTest.yml**  
+    .github/workflows/NameSorter_DD_BuildTest.yml  
 
 ---
 
