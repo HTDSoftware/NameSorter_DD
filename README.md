@@ -170,29 +170,37 @@ Asserts that sorted-names-list.txt is created with expected content
 
 Cleans up all files after execution
 
+Here is the reformatted "Final Thoughts" section with proper headings:
+
+```
 ## 🙌 Final Thoughts
-Below is the section of the remit which determined the majority of my coding decisions:
 
-"Most importantly it is to understand how your code communicates it's purpose clearly and with empathy to your potential team members.
-What do we mean by empathy?
-Empathy here is caring about how easy your code is to understand and navigate for the next engineer who touches it.
-Secondly it is to understand your ability to compose quality code that adheres to SOLID"
+### Below is the section of the remit which determined the majority of my coding decisions:
+"Most importantly it is to understand how your code communicates its purpose clearly and with empathy to your potential team members.  
+What do we mean by empathy?  
+Empathy here is caring about how easy your code is to understand and navigate for the next engineer who touches it.  
+Secondly, it is to understand your ability to compose quality code that adheres to SOLID."
 
-When I began to design my solution, there was a possibility to abstract some elements to a further degree and to loosely couple further elements, and to use syntax introduced in the latest versions of C#, but for "Ease of Understanding" for the next Engineer I stopped where I did. Among my considerations, I could have introduced:
+### Design considerations:
+When I began to design my solution, there was a possibility to abstract some elements to a further degree and to loosely couple further elements, and to use syntax introduced in the latest versions of:
+- More Interfaces and Classes
+- More Dependency Injection
+- The use of Primary Constructors
+- The use of Coalescing Expressions
+- The use of more Advanced array access
+- etc.
 
-More Interfaces and Classes
-More Dependency Injection
-The use of Primary Constructors
-The use of Coalescing Expressions
-The use of more Advanced array access
-etc.
+---
 
 ## ✅ Below is the checklist provided in the remit:
-The solution should be available for review on GitHub — DONE
-The names should be sorted correctly — DONE
-It should print the sorted list of names to screen — DONE
-Write/overwrite the sorted list of names to a file called sorted-names-list.txt — DONE
-Unit tests should exist — DONE
-Minimal, practical documentation should exist — DONE (README.md)
- 
+- The solution should be available for review on GitHub — **DONE**
+- The names should be sorted correctly — **DONE**
+- It should print the sorted list of names to screen — **DONE**
+- Write/overwrite the sorted list of names to a file called `sorted-names-list.txt` — **DONE**
+- Unit tests should exist — **DONE**
+- Minimal, practical documentation should exist — **DONE** (README.md)
+
+---
+
 Thanks for the opportunity!
+```
