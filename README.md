@@ -170,7 +170,7 @@ Asserts that sorted-names-list.txt is created with expected content
 
 Cleans up all files after execution
 
-🙌 Final Thoughts
+## 🙌 Final Thoughts
 Below is the section of the remit which determined the majority of my coding decisions:
 
 "Most importantly it is to understand how your code communicates it's purpose clearly and with empathy to your potential team members.
@@ -187,7 +187,7 @@ The use of Coalescing Expressions
 The use of more Advanced array access
 etc.
 
-✅ Below is the checklist provided in the remit:
+## ✅ Below is the checklist provided in the remit:
 The solution should be available for review on GitHub — DONE
 The names should be sorted correctly — DONE
 It should print the sorted list of names to screen — DONE
